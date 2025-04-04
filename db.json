@@ -1,0 +1,51 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "أحمد محمد",
+      "age": 45,
+      "condition": "سكري",
+      "priority": "عالي",
+      "lastRequest": "2023-05-10"
+    },
+    {
+      "id": 2,
+      "name": "فاطمة علي",
+      "age": 32,
+      "condition": "ضغط دم",
+      "priority": "متوسط",
+      "lastRequest": "2023-06-15"
+    },
+    {
+      "id": 3,
+      "name": "خالد عبدالله",
+      "age": 60,
+      "condition": "قلب",
+      "priority": "عالي",
+      "lastRequest": "2023-04-20"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "date": "2023-06-20",
+      "status": "pending",
+      "items": ["أدوية سكري", "مستلزمات حقن"]
+    },
+    {
+      "id": 2,
+      "patientId": 2,
+      "date": "2023-06-18",
+      "status": "approved",
+      "items": ["أدوية ضغط"]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "المسؤول",
+      "role": "admin"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+/* أنماط عامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+nav a.active {
+    background-color: #3498db;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+/* أنماط قائمة المرضى */
+.patient-list, .requests-management, .stats-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filters select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.patients-container, .requests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.patient-card, .request-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.patient-card:hover, .request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.patient-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.patient-info {
+    margin-bottom: 0.5rem;
+}
+
+.priority-high {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.priority-medium {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.priority-low {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.request-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* أنماط نموذج الطلب */
+.request-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* أنماط بطاقات الطلبات */
+.request-status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.status-pending {
+    background-color: #f39c12;
+    color: white;
+}
+
+.status-approved {
+    background-color: #27ae60;
+    color: white;
+}
+
+.status-rejected {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.request-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.approve-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.reject-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* أنماط صفحة الإحصاءات */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.stat-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.patient-stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.patient-stat-item:last-child {
+    border-bottom: none;
+}
+
+/* أنماط متجاوبة */
+@media (max-width: 768px) {
+    .patients-container, .requests-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+}
